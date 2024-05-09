@@ -6,6 +6,8 @@ export class Sample_Loc{
         email:()=>cy.xpath("//input[@id='user[email]']"),
         pass:()=>cy.xpath("//input[@id='user[password]']"),
         invldCredError:()=>cy.xpath("//li[normalize-space(text())='Invalid email or password.']"),
-        signInBtn:()=>cy.xpath("//button[@type='submit']")
+        signInBtn:()=>cy.xpath("//button[@type='submit']"),
+        firstCard:()=>cy.xpath("(//div[@class='X8l5DD']//..//img[@class='xTaogf _3iTqAS'])[1]")
     }
+    
 }
