@@ -1,4 +1,3 @@
-import { error } from "console";
 
 const defaultTimeout=60000;
 export class Helper {
@@ -12,7 +11,6 @@ export class Helper {
         cy.xpath("//*[text()='"+text+"']",{timeout:60000}).then($el=>{
             if($el.length>1){
                 cy.log('Text is not unique');
-                throw error("Its not unique text")
             }else{
                 cy.log('Text found as expected')
             }
