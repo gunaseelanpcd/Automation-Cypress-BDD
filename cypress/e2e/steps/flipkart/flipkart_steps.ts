@@ -11,21 +11,9 @@ Then('User validate {string} label in mobiles section', (text:string) => {
 When('User select first card under top deals of the sales', () => {
     flipkartHome.selectFirstCard();
 })
-Then('User check on first smartphone within the range',(data:DataTable)=>{
-
+Then('User check on first smartphone within the range {string}',(range:string)=>{
+     flipkartHome.selectSmartphoneBasedOnRange(range);
 })
-Then('User check first smartphone is comes under the brands',(data:DataTable)=>{
-
-})
-When('User select the smartphone based on criteria',()=>{
-
-})
-Then('User print name and model of the smartphone',()=>{
-
-})
-When('User click buy now button',()=>[
-
-])
-Then('User validate {string} label',(text:string)=>{
-
+Then('User print name of the smartphone',()=>{
+     flipkartHome.printDetailsOfSmartphone();
 })

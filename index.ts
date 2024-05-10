@@ -1,5 +1,15 @@
-const calulation=(a:number,b:number):number=>{
-  return a+b;
+function duplicateCountOfAChar(input: string) {
+  const charMap: { [key: string]: number } = {};
+  for (const char of input) {
+    if (char !== " ") {
+      charMap[char] = (charMap[char] || 0) + 1;
+    }
+  }
+  for(const charz in charMap){
+    if(charMap[charz]>1){
+      console.log(`Char '${charz}' have duplicates of ${charMap[charz]}`);
+    }
+  }
 }
 
-console.log(calulation(10,12));
+duplicateCountOfAChar("Essential");
