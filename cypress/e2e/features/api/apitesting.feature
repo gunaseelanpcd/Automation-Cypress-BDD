@@ -13,3 +13,11 @@ Feature: API Testing performing basic request
     And User perform DETELE request
       | Method | URL                                        |
       | POST   | https://jsonplaceholder.typicode.com/posts |
+
+  Scenario: Different ways to perform POST request
+    Given User perform POST request hardcode method
+    When User perform POST request with dynamically gerated data
+    And User permorm POST request using fixture file
+
+  Scenario: Query PARAMS
+    Given User perform Query PARAMS in API
