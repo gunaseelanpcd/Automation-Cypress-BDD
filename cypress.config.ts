@@ -22,7 +22,7 @@ async function setupNodeEvents(
 export default defineConfig({
     e2e: {
         specPattern: '**/*.feature',
-        baseUrl:"https://aqueous-brook-60480.herokuapp.com/",
+        baseUrl:"https://simple-books-api.glitch.me",
         setupNodeEvents,
     },
 })

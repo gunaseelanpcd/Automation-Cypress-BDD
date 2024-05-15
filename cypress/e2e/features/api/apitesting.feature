@@ -21,3 +21,24 @@ Feature: API Testing performing basic request
 
   Scenario: Query PARAMS
     Given User perform Query PARAMS in API
+
+
+  Scenario: Generate API Token and place order then verify
+    Given User Generate API Token from simple books
+    When User submit an order with gerated API Token
+    Then User fetch orders from the database
+
+
+  Scenario: Parsing JSON response
+    Given User parsing simple json response
+    When User get total price for 5 objects and it should be '899.23'
+
+  Scenario: Schema validation for JSON
+    Given User perform Schema validation
+  
+  @focus
+  Scenario: Performing authentication methods
+    Given User perform basic authentication
+    When User perform digest authentication
+    When User perform bearer token authentication
+    When User perform API key authentication
