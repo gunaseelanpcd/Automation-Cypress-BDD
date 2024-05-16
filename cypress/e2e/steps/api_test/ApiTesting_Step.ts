@@ -109,7 +109,6 @@ When('User permorm POST request using fixture file', () => {
             method: 'POST',
             url: 'https://api.restful-api.dev/objects',
             body: dataBody
-
         })
             .then((response) => {
                 expect(response.body.name).to.eq(dataBody.name);
@@ -234,6 +233,9 @@ Given('User perform Schema validation', () => {
             expect(result).to.be.true
         })
     })
+    cy.fixture('example.json').then(data=>{
+        cy.log(data.name);
+    })
 })
 Given('User perform basic authentication',()=>{
     cy.request({
@@ -263,7 +265,7 @@ When('User perform digest authentication',()=>{
     })
     })
  When('User perform bearer token authentication',()=>{
-    //Github personal token
+    //Github personal token , Due to github push protection we cant hardcode this token and push
     let token="";
      cy.request({
         method:'GET',
